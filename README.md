@@ -71,8 +71,4 @@ flashcards-mvp/
 * `localStorage` для хранения данных
 * Опционально: Node.js/npm для локального сервера (`http-server`)
 
----
 
-## Лицензия
-
-MIT © Ваше Имя

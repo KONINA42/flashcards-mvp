@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards MVP</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Flashcards</h1>
+  </header>
+
+  <main>
+    <!-- 1. Экран: список колод -->
+    <section id="deck-list" class="view">
+      <h2>Мои колоды</h2>
+      <ul id="decks"></ul>
+      <form id="new-deck-form">
+        <input type="text" id="new-deck-name" placeholder="Название новой колоды" required />
+        <button type="submit">Создать колоду</button>
+      </form>
+    </section>
+
+    <!-- 2. Экран: список карточек в колоде -->
+    <section id="card-list" class="view" hidden>
+      <button id="back-to-decks">← К колодам</button>
+      <h2 id="deck-title">Название колоды</h2>
+      <ul id="cards"></ul>
+      <form id="new-card-form">
+        <input type="text" id="card-front" placeholder="Вопрос (front)" required />
+        <input type="text" id="card-back" placeholder="Ответ (back)" required />
+        <button type="submit">Добавить карточку</button>
+      </form>
+      <button id="start-study">Начать тренировку</button>
+    </section>
+
+    <!-- 3. Экран: режим тренировки -->
+    <section id="study-view" class="view" hidden>
+      <button id="back-to-cards">← К карточкам</button>
+      <div id="card-container">
+        <div id="card-front-view" class="card-side"></div>
+        <div id="card-back-view" class="card-side" hidden></div>
+      </div>
+      <div id="study-controls">
+        <button id="prev-card">‹ Предыдущая</button>
+        <span id="progress">0 / 0</span>
+        <button id="next-card">Следующая ›</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
